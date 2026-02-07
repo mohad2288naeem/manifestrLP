@@ -1,0 +1,864 @@
+.pricingSection {
+  width: 100%;
+  background: #fff;
+  padding: 4rem 2rem 0;
+  position: relative;
+  /* Ensure z-index works */
+  z-index: 10;
+}
+
+.lifetimeBanner {
+  text-align: center;
+  margin-top: -105px;
+  /* Adjusted to center the first line on the boundary */
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 20;
+}
+
+.lifetimeTitle {
+  color: #060606;
+  text-align: center;
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 72px;
+  /* 120% */
+  letter-spacing: -1.2px;
+  margin-bottom: 20px;
+}
+
+.lifetimeTitle .italic {
+  color: #060606;
+  font-family: "IvyPresto Headline", serif;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 80px;
+  /* 133.333% */
+  letter-spacing: -1.2px;
+  margin-right: 10px;
+  /* Add some spacing */
+}
+
+.boldManifestr {
+  font-family: "HK Grotesk", sans-serif;
+  font-weight: 800;
+  /* Bolder for emphasis */
+  display: block;
+  margin-top: 5px;
+  text-transform: uppercase;
+  color: #060606;
+  letter-spacing: -1.2px;
+}
+
+.lifetimeSubtitle {
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 24px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+.lifetimeNote {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Title Section */
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mainTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Pricing Grid */
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.pricingCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.pricingCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.preferred {
+  border: 2px solid #000;
+  transform: scale(1.02);
+}
+
+.preferredRibbon {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: #000;
+  color: #fff;
+  padding: 8px 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transform: rotate(45deg);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cardBadge {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+  padding: 0.75rem;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cardHeader {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cardHeader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/plan.svg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.cardImage {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.titleItalic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.cardSubtitle {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.cardBody {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.priceSection {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.price {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.soldOutBadge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #ccc;
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.allocationBadge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #f5f5f5;
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  flex: 1;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.checkmark {
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  color: #000;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.dash {
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  color: #000;
+  flex-shrink: 0;
+  font-weight: 400;
+}
+
+.benefitsLink {
+  text-align: center;
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.benefitsLink:hover {
+  color: #333;
+}
+
+.buttonPrimary {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 1rem;
+}
+
+.buttonPrimary:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.buttonDisabled {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #ccc;
+  color: #888;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: not-allowed;
+  margin-bottom: 1rem;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Guarantee Section */
+.guaranteeWrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #6B6B6B;
+  padding: 100px 0;
+  margin-top: 80px;
+}
+
+.guaranteeContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  align-items: flex-start;
+  justify-items: start;
+}
+
+.guaranteeCard {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.guaranteeTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.guaranteeText {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  color: #e2e2e2;
+  font-weight: 400;
+  max-width: 320px;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 40px 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #888;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.contact {
+  font-size: 14px;
+  color: #fff;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footerLink {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  opacity: 0.8;
+}
+
+.footerLink:hover {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 900px;
+  }
+
+  .pricingGrid {
+    gap: 1.5rem;
+  }
+
+  .lifetimeBanner {
+    margin-top: -100px;
+    margin-bottom: 40px;
+  }
+
+  .lifetimeTitle {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .lifetimeTitle .italic {
+    font-size: 48px;
+    line-height: 68px;
+  }
+
+  .lifetimeSubtitle {
+    font-size: 20px;
+  }
+
+  .lifetimeNote {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricingSection {
+    padding: 3rem 1.5rem 0;
+    background: #ffffff;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .lifetimeBanner {
+    margin-top: -90px;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lifetimeTitle {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .lifetimeSubtitle {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    text-align: center;
+    width: 100%;
+    font-size: 19px;
+  }
+
+  .lifetimeNote {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    font-size: 16px;
+  }
+
+  .lifetimeTitle {
+    font-size: 42px;
+    line-height: 54px;
+  }
+
+  .lifetimeTitle .italic {
+    font-size: 42px;
+    line-height: 60px;
+  }
+
+  .boldManifestr {
+    margin-top: 3px;
+  }
+
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 500px;
+    margin: 0 auto 4rem;
+  }
+
+  .preferred {
+    transform: scale(1);
+  }
+
+  .guaranteeWrapper {
+    padding: 60px 0;
+    margin-top: 60px;
+  }
+
+  .guaranteeContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 30px;
+    justify-items: start;
+  }
+
+  .guaranteeTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .guaranteeText {
+    font-size: 15px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricingSection {
+    padding: 2.5rem 1rem 0;
+    background: #ffffff;
+  }
+
+  .lifetimeBanner {
+    margin-top: -85px;
+    margin-bottom: 35px;
+    padding: 0 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lifetimeTitle {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .lifetimeSubtitle {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .lifetimeNote {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .lifetimeTitle {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+  .lifetimeTitle .italic {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-right: 8px;
+  }
+
+  .boldManifestr {
+    margin-top: 4px;
+    font-size: 32px;
+  }
+
+  .lifetimeSubtitle {
+    font-size: 18px;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  .lifetimeNote {
+    font-size: 15px;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  .pricingGrid {
+    max-width: 400px;
+    gap: 1.5rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .cardTitle {
+    font-size: 1.75rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 32px;
+  }
+
+  .footerLinks {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 24px;
+  }
+
+  .guaranteeWrapper {
+    padding: 50px 0;
+  }
+
+  .guaranteeContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 40px;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricingSection {
+    padding: 1rem 0.5rem 0;
+    background: #ffffff;
+  }
+
+  .lifetimeBanner {
+    margin-top: -30px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .lifetimeTitle {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .lifetimeSubtitle {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .lifetimeNote {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .lifetimeTitle {
+    font-size: 26px;
+    line-height: 1.1;
+  }
+
+  .lifetimeTitle .italic {
+    font-size: 26px;
+    line-height: 1.2;
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+
+  .boldManifestr {
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  .lifetimeSubtitle {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .lifetimeNote {
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+
+  .pricingGrid {
+    max-width: 100%;
+  }
+
+  .guaranteeWrapper {
+    padding: 60px 0;
+    margin-top: 40px;
+  }
+
+  .guaranteeContainer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 32px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .guaranteeCard {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .guaranteeTitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .guaranteeWrapper {
+    padding: 40px 0;
+  }
+
+  .guaranteeCard {
+    padding: 0;
+  }
+
+  .pricingSection {
+    padding: 1rem 0.75rem 0;
+    background: #ffffff;
+  }
+
+  .lifetimeBanner {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lifetimeTitle {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .lifetimeSubtitle {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .lifetimeNote {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .lifetimeTitle {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .lifetimeTitle .italic {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .boldManifestr {
+    font-size: 28px;
+  }
+
+  .lifetimeSubtitle {
+    font-size: 16px;
+  }
+
+  .lifetimeNote {
+    font-size: 14px;
+  }
+}
