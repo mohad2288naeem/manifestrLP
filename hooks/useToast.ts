@@ -1,7 +1,6 @@
 import React from "react";
 import { toast, ToastPosition, ToastOptions } from "react-toastify";
 
-// Default configuration for consistent premium feel
 const defaultOptions: ToastOptions = {
   position: "top-right" as ToastPosition,
   autoClose: 4000,
@@ -46,7 +45,6 @@ export const useToast = () => {
         ...options,
       });
     },
-    // For custom loading toasts
     loading: (message: React.ReactNode, options?: ToastOptions) => {
       return toast.loading(message as any, {
         ...defaultOptions,

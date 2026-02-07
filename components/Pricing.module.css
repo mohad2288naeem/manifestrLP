@@ -1,7 +1,7 @@
 .pricingSection {
   width: 100%;
   background: #fff;
-  padding: 4rem 2rem 0;
+  padding: 0 2rem 0;
   position: relative;
   /* Ensure z-index works */
   z-index: 10;
@@ -9,11 +9,11 @@
 
 .lifetimeBanner {
   text-align: center;
-  margin-top: -1px;
-  /* Adjusted to center the first line on the boundary */
-  margin-bottom: 40px;
+  margin-top: 0;
+  top: -30px;
+  margin-bottom: -45px;
   position: relative;
-  z-index: 20;
+  z-index: 100;
 }
 
 .lifetimeTitle {
@@ -48,7 +48,7 @@
   font-weight: 400;
   /* Regular per design */
   display: block;
-  font-size: 50px;
+  font-size: 45px;
   /* Prominent but balanced */
   margin-top: 0;
   text-transform: uppercase;
@@ -479,7 +479,7 @@
   }
 
   .lifetimeBanner {
-    margin-top: -100px;
+    margin-top: -55px;
     margin-bottom: 40px;
   }
 
@@ -504,7 +504,7 @@
 
 @media (max-width: 1024px) {
   .pricingSection {
-    padding: 3rem 1.5rem 0;
+    padding: 0 1.5rem 0;
     background: #ffffff;
   }
 
@@ -513,13 +513,15 @@
   }
 
   .lifetimeBanner {
-    margin-top: -90px;
-    margin-bottom: 40px;
+    top: -35px;
+    margin-bottom: -30px;
     text-align: center;
     padding: 0 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 100;
   }
 
   .lifetimeTitle {
@@ -594,13 +596,13 @@
 
 @media (max-width: 768px) {
   .pricingSection {
-    padding: 2.5rem 1rem 0;
+    padding: 0 1rem 0;
     background: #ffffff;
   }
 
   .lifetimeBanner {
-    margin-top: 2px;
-    margin-bottom: 35px;
+    top: -18px;
+    margin-bottom: -15px;
     padding: 0 32px;
     text-align: center;
     display: flex;
@@ -711,13 +713,13 @@
 
 @media (max-width: 640px) {
   .pricingSection {
-    padding: 1rem 0.5rem 0;
+    padding: 0 0.5rem 0;
     background: #ffffff;
   }
 
   .lifetimeBanner {
-    margin-top: -30px;
-    margin-bottom: 30px;
+    top: -15px;
+    margin-bottom: -10px;
     text-align: center;
     padding: 0 32px;
     display: flex;
@@ -817,13 +819,13 @@
   }
 
   .pricingSection {
-    padding: 1rem 0.75rem 0;
+    padding: 0 0.75rem 0;
     background: #ffffff;
   }
 
   .lifetimeBanner {
-    margin-top: 5px;
-    margin-bottom: 25px;
+    top: -12px;
+    margin-bottom: -10px;
     text-align: center;
     padding: 0 24px;
     display: flex;
@@ -862,7 +864,7 @@
   }
 
   .boldManifestr {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .lifetimeSubtitle {

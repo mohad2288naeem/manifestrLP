@@ -57,7 +57,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-bottom: 5%;
+  padding-bottom: 8%;
 }
 
 /* Tablet */
@@ -78,6 +78,7 @@
 
   .waitlistWrapper {
     height: 35%;
+    padding-bottom: 15%;
   }
 }
 
@@ -97,8 +98,11 @@
 
   .comingSoonContainer {
     top: 42%;
-    /* Pushed down significantly */
     width: 90%;
+  }
+
+  .waitlistWrapper {
+    padding-bottom: 20%;
   }
 
 }
