@@ -9,7 +9,7 @@
 
 .lifetimeBanner {
   text-align: center;
-  margin-top: -105px;
+  margin-top: -1px;
   /* Adjusted to center the first line on the boundary */
   margin-bottom: 40px;
   position: relative;
@@ -48,7 +48,7 @@
   font-weight: 400;
   /* Regular per design */
   display: block;
-  font-size: 60px;
+  font-size: 50px;
   /* Prominent but balanced */
   margin-top: 0;
   text-transform: uppercase;
@@ -599,10 +599,10 @@
   }
 
   .lifetimeBanner {
-    margin-top: -30px;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 35px;
     padding: 0 32px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
