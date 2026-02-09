@@ -8,11 +8,14 @@ import Waitlist from './Waitlist'
 export default function Hero() {
   return (
     <div className={styles.hero} style={{ position: 'relative' }}>
-      <img 
-        src="/assets/background.svg" 
-        className={styles.backgroundImage}
-        alt="Background"
-      />
+      <picture className={styles.backgroundPicture}>
+        <source media="(max-width: 768px)" srcSet="/assets/background-mob.svg" />
+        <img 
+          src="/assets/background.svg" 
+          className={styles.backgroundImage}
+          alt="Background"
+        />
+      </picture>
 
       {/* Top Logo */}
       <div className={styles.logoContainer}>
@@ -24,13 +27,13 @@ export default function Hero() {
       </div>
 
       {/* Center Coming Soon */}
-      <div className={styles.comingSoonContainer}>
+      {/* <div className={styles.comingSoonContainer}>
         <img 
           src="/assets/comingsoon.svg" 
           alt="Coming Soon" 
           className={styles.comingSoon}
         />
-      </div>
+      </div> */}
       
       <div className={styles.waitlistWrapper}>
         <Waitlist />

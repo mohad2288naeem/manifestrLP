@@ -323,7 +323,7 @@
 
   .contentWrapper {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 12px;
     text-align: left;
     align-items: flex-start;
@@ -357,19 +357,19 @@
   }
 
   .title {
-    font-size: clamp(20px, 4.5vw, 32px);
+    font-size: clamp(30px, 4.5vw, 32px);
     line-height: 1.1;
     text-align: left;
     margin-bottom: 1vh;
   }
 
   .italic {
-    font-size: clamp(20px, 4.5vw, 32px);
+    font-size: clamp(30px, 4.5vw, 32px);
     line-height: 1.1;
   }
 
   .description {
-    font-size: clamp(12px, 2.5vw, 15px);
+    /* font-size: clamp(12px, 2.5vw, 15px); */
     line-height: 1.4;
     margin-bottom: 0.5vh;
     max-width: 100%;
@@ -378,13 +378,13 @@
   }
 
   .subtitle {
-    font-size: clamp(12px, 2.5vw, 15px);
+    /* font-size: clamp(12px, 2.5vw, 15px); */
     margin-bottom: 0.5vh;
   }
 
   .featureItem {
     margin-bottom: 0.5vh;
-    font-size: clamp(11px, 2.5vw, 14px);
+    /* font-size: clamp(11px, 2.5vw, 14px); */
   }
 
   .featureList {
@@ -409,25 +409,27 @@
 
 @media (max-width: 768px) {
   .waitlistSection {
-    padding: 0 4vw;
+    padding: 0 7vw;
   }
 
-  .formTitle {
+  /* .formTitle {
     font-size: 16px;
-  }
+  } */
 
   .contentWrapper {
-    gap: 4px;
+    gap: 20px;
     align-items: flex-end;
+    flex-direction: column;
     /* Keep form on the right-hand side */
   }
 
   .formContainer {
     width: 100%;
-    max-width: 75%;
+    max-width: 100%;
     padding: clamp(8px, 2vh, 16px);
     gap: 8px;
     border-radius: 8px;
+    align-self: flex-start;
   }
 
   .form {
@@ -451,13 +453,13 @@
   } */
 
   .featureItem {
-    font-size: clamp(9px, 2vw, 11px);
+    /* font-size: clamp(9px, 2vw, 11px); */
     margin-bottom: 1px;
   }
 
   .input {
     padding: 6px 6px;
-    font-size: 11px;
+    /* font-size: 11px; */
     height: 25px;
     border-radius: 8px;
   }
@@ -473,7 +475,7 @@
 
 @media (max-width: 480px) {
   .formContainer {
-    max-width: 90%;
+    /* max-width: 90%; */
     padding: 10px;
   }
 
