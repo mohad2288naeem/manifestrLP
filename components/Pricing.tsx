@@ -10,7 +10,7 @@ export default function Pricing() {
       <div className={styles.container}>
 
         {/* Lifetime Membership Banner - Overlapping */}
-        <div className={styles.lifetimeBanner}>
+        {/* <div className={styles.lifetimeBanner}>
           <h2 className={styles.lifetimeTitle}>
             <span className={styles.italic}>Lifetime</span> Memberships to
             <span className={styles.boldManifestr}>MANIFESTR</span>
@@ -23,7 +23,7 @@ export default function Pricing() {
             <br />
             Once allocated, no further lifetime access will ever be offered.
           </p>
-        </div>
+        </div> */}
 
         {/* Just the three images as cards - no overlays, no backgrounds */}
         {/* <div className={styles.pricingGrid}>
@@ -74,7 +74,7 @@ export default function Pricing() {
           </div> */}
       </div>
 
-      <div className={styles.guaranteeWrapper}>
+      {/* <div className={styles.guaranteeWrapper}>
         <div className={styles.guaranteeContainer}>
           <div className={styles.guaranteeCard}>
             <h3 className={styles.guaranteeTitle}>Peace of Mind Guarantee</h3>
@@ -101,7 +101,7 @@ export default function Pricing() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
