@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const metadata: Metadata = {
   title: 'ManifestR',
@@ -13,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{ margin: 0, padding: 0, width: '100%' }}>
-      <body style={{ margin: 0, padding: 0, width: '100%' }}>{children}</body>
+      <body style={{ margin: 0, padding: 0, width: '100%' }}>
+        {children}
+        <ToastContainer />
+      </body>
     </html>
   )
 }
