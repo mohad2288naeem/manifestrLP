@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import styles from './Waitlist.module.css'
 import { useToast } from '../hooks/useToast'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function Waitlist() {
   const toast = useToast()
@@ -13,6 +14,19 @@ export default function Waitlist() {
     lastName: '',
     email: ''
   })
+  
+  // Ref for the waitlist section to track scroll
+  const sectionRef = useRef<HTMLElement>(null)
+  
+  // Track scroll progress of the section relative to viewport
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  })
+  
+  // Map scroll progress to button width
+  // Button starts normal, expands as it comes into view, then normalizes
+  const buttonWidth = useTransform(scrollYProgress, [0, 1], ["200px", "80px"])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -46,7 +60,7 @@ export default function Waitlist() {
     })
   }
 
-  const FormContent = () => (
+  const FormContent = ({ isModal = false }: { isModal?: boolean }) => (
     <>
       <h3 className={styles.formTitle}>Request Early Access</h3>
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -97,11 +111,19 @@ export default function Waitlist() {
             disabled={isLoading}
           />
         </div>
-        <button
+        <motion.button
           type="submit"
           className={styles.submitButton}
           disabled={isLoading}
-          style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center', minWidth: '160px' }}
+          style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: '8px', 
+            justifyContent: 'center', 
+            minWidth: '80px',
+            maxWidth: '250px',
+            width: isModal ? '100%' : buttonWidth
+          }}
         >
           {isLoading ? (
             <>
@@ -111,26 +133,33 @@ export default function Waitlist() {
           ) : (
             'Request Access'
           )}
-        </button>
+        </motion.button>
       </form>
     </>
   )
 
   return (
-    <section className={styles.waitlistSection} style={{ background: 'transparent', pointerEvents: 'auto' }}>
+    <section ref={sectionRef} className={styles.waitlistSection} style={{ background: 'transparent', pointerEvents: 'auto' }}>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.leftContent}>
-            <h2 className={styles.title}>
-              Early Access <span className={styles.italic}>Waitlist</span>
-            </h2>
-            <p className={styles.description}>
-              MANIFESTR is an AI-powered platform for high-performance work.
-              Designed for focused, high-impact execution.
-            </p>
-            <p className={styles.subtitle}>
-              Early access is invite-only and limited in availability.
-            </p>
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+            >
+              <h2 className={styles.title}>
+                Early Access <span className={styles.italic}>Waitlist</span>
+              </h2>
+              <p className={styles.description}>
+                MANIFESTR is an AI-powered platform for high-performance work.
+                Designed for focused, high-impact execution.
+              </p>
+              <p className={styles.subtitle}>
+                Early access is invite-only and limited in availability.
+              </p>
+            </motion.div>
             <ul className={styles.featureList}>
               <li className={styles.featureItem}>
                 <span className={styles.checkmark}>✓</span>
@@ -169,7 +198,7 @@ export default function Waitlist() {
               </button>
             )}
             <div className={styles.formContainer} style={{ display: 'flex' }}>
-              <FormContent />
+              <FormContent isModal={true} />
             </div>
           </div>
         </div>
