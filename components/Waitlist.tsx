@@ -23,7 +23,7 @@ export default function Waitlist() {
       await new Promise(resolve => setTimeout(resolve, 2000))
 
       console.log('Form submitted:', formData)
-      toast.success("Recorded, We'll get back to you shortly")
+      toast.success("Requested, We'll get back to you shortly")
 
       // Reset form
       setFormData({
@@ -46,7 +46,7 @@ export default function Waitlist() {
     })
   }
 
-  const FormContent = () => (
+  const formContent = (
     <>
       <h3 className={styles.formTitle}>Request Early Access</h3>
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -106,7 +106,7 @@ export default function Waitlist() {
           {isLoading ? (
             <>
               <span className={styles.spinner}></span>
-              <span>Recording...</span>
+              <span>Requesting...</span>
             </>
           ) : (
             'Request Access'
@@ -155,7 +155,7 @@ export default function Waitlist() {
           </button>
 
           <div className={styles.formContainer}>
-            <FormContent />
+            {formContent}
           </div>
         </div>
       </div>
@@ -169,7 +169,7 @@ export default function Waitlist() {
               </button>
             )}
             <div className={styles.formContainer} style={{ display: 'flex' }}>
-              <FormContent />
+              {formContent}
             </div>
           </div>
         </div>
