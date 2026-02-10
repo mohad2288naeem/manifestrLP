@@ -471,6 +471,12 @@
     margin-top: 2px;
     border-radius: 4px;
   }
+
+  .nameRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0.5rem, 1vw, 1rem);
+}
 }
 
 @media (max-width: 480px) {

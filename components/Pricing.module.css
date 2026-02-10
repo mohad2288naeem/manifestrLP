@@ -684,7 +684,7 @@
   }
 
   .footerContent {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: left;
     align-items: flex-start;
     gap: 20px;
