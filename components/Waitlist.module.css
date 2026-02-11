@@ -67,7 +67,7 @@
   font-family: "IvyPresto Headline", serif;
   font-size: 48px;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -1px;
 }
@@ -409,7 +409,7 @@
 
 @media (max-width: 768px) {
   .waitlistSection {
-    padding: 0 7vw;
+    padding: 0 8vw;
   }
 
   /* .formTitle {
@@ -427,13 +427,13 @@
     width: 100%;
     max-width: 100%;
     padding: clamp(8px, 2vh, 16px);
-    gap: 8px;
+    gap: 16px;
     border-radius: 8px;
     align-self: flex-start;
   }
 
   .form {
-    gap: 6px;
+    gap: 0.8rem;
   }
 
   /* 
@@ -460,14 +460,14 @@
   .input {
     padding: 6px 6px;
     /* font-size: 11px; */
-    height: 25px;
+    height: 40px;
     border-radius: 8px;
   }
 
   .submitButton {
     padding: 4px 6px;
-    font-size: 12px;
-    height: 28px;
+    font-size: 13px;
+    height: 35px;
     margin-top: 2px;
     border-radius: 4px;
   }
@@ -475,14 +475,14 @@
   .nameRow {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(0.5rem, 1vw, 1rem);
+  gap: clamp(0.8rem, 1vw, 1rem);
 }
 }
 
 @media (max-width: 480px) {
   .formContainer {
     /* max-width: 90%; */
-    padding: 10px;
+    padding: 2rem;
   }
 
   /* .contentWrapper {
