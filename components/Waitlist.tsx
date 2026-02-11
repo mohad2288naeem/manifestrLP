@@ -60,7 +60,7 @@ export default function Waitlist() {
     })
   }
 
-  const FormContent = ({ isModal = false }: { isModal?: boolean }) => (
+  const formContent = (
     <>
       <h3 className={styles.formTitle}>Request Early Access</h3>
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -184,7 +184,7 @@ export default function Waitlist() {
           </button>
 
           <div className={styles.formContainer}>
-            <FormContent />
+            {formContent}
           </div>
         </div>
       </div>
@@ -198,7 +198,7 @@ export default function Waitlist() {
               </button>
             )}
             <div className={styles.formContainer} style={{ display: 'flex' }}>
-              <FormContent isModal={true} />
+              {formContent}
             </div>
           </div>
         </div>
