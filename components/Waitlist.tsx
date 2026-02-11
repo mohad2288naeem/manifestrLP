@@ -37,7 +37,7 @@ export default function Waitlist() {
       await new Promise(resolve => setTimeout(resolve, 2000))
 
       console.log('Form submitted:', formData)
-      toast.success("Recorded, We'll get back to you shortly")
+      toast.success("Requested, We'll get back to you shortly")
 
       // Reset form
       setFormData({
@@ -128,7 +128,7 @@ export default function Waitlist() {
           {isLoading ? (
             <>
               <span className={styles.spinner}></span>
-              <span>Recording...</span>
+              <span>Requesting...</span>
             </>
           ) : (
             'Request Access'

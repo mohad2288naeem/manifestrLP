@@ -110,8 +110,8 @@ export default function Pricing() {
             <span className={styles.contact}>
               Questions? We're only an email away - <a href="mailto:hello@manifestr.ai">hello@manifestr.ai</a>
             </span>
-            <a href="#" className={styles.footerLink}>Privacy</a>
-            <a href="#" className={styles.footerLink}>Terms</a>
+            {/* <a href="#" className={styles.footerLink}>Privacy</a>
+            <a href="#" className={styles.footerLink}>Terms</a> */}
           </div>
         </div>
       </footer>

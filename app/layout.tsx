@@ -6,6 +6,9 @@ import 'react-toastify/dist/ReactToastify.css'
 export const metadata: Metadata = {
   title: 'Manifestr',
   description: 'Welcome to Manifestr',
+  icons: {
+    icon: '/assets/logo.svg',
+  },
 }
 
 export default function RootLayout({
