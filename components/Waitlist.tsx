@@ -120,9 +120,9 @@ export default function Waitlist() {
             alignItems: 'center', 
             gap: '8px', 
             justifyContent: 'center', 
-            minWidth: '80px',
-            maxWidth: '250px',
-            width: isModal ? '100%' : buttonWidth
+            minWidth: '180px',
+            maxWidth: '300px',
+            width: isModalOpen ? '100%' : buttonWidth
           }}
         >
           {isLoading ? (
