@@ -162,15 +162,21 @@ export default function Waitlist() {
             </motion.div>
             <ul className={styles.featureList}>
               <li className={styles.featureItem}>
-                <span className={styles.checkmark}>✓</span>
+                <svg className={styles.checkmark} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M13.3346 4L6.0013 11.3333L2.66797 8" stroke="#1D1D1D" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
                 Private release access
               </li>
               <li className={styles.featureItem}>
-                <span className={styles.checkmark}>✓</span>
+                <svg className={styles.checkmark} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M13.3346 4L6.0013 11.3333L2.66797 8" stroke="#1D1D1D" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
                 Eligibility for private sessions with the founder
               </li>
               <li className={styles.featureItem}>
-                <span className={styles.checkmark}>✓</span>
+                <svg className={styles.checkmark} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M13.3346 4L6.0013 11.3333L2.66797 8" stroke="#1D1D1D" strokeWidth="1.33" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
                 Advanced visibility into new features and capabilities
               </li>
             </ul>

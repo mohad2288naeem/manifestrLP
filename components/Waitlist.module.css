@@ -64,12 +64,12 @@
 
 .italic {
   color: #1D1D1D;
-  font-family: "IvyPresto Headline", serif;
-  font-size: 48px;
+  font-family: "IvyPresto Headline";
+  font-size: 60px;
   font-style: italic;
   font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -1px;
+  line-height: 85.131px;
+  letter-spacing: -1.2px;
 }
 
 .description {
@@ -79,7 +79,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 1.4;
-  margin-bottom: 6px;
+  margin-bottom: 16px;
   max-width: 480px;
 }
 
@@ -111,9 +111,9 @@
 }
 
 .checkmark {
+  width: 16px;
+  height: 16px;
   margin-right: 12px;
-  font-size: 12px;
-  color: #1D1D1D;
   flex-shrink: 0;
   opacity: 0.8;
 }
@@ -371,7 +371,7 @@
   .description {
     /* font-size: clamp(12px, 2.5vw, 15px); */
     line-height: 1.4;
-    margin-bottom: 0.5vh;
+    margin-bottom: 12px;
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
