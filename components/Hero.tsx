@@ -9,9 +9,9 @@ export default function Hero() {
   return (
     <div className={styles.hero} style={{ position: 'relative' }}>
       <picture className={styles.backgroundPicture}>
-        <source media="(max-width: 768px)" srcSet="/assets/background-mob.svg" />
+        <source media="(max-width: 768px)" srcSet="/assets/background-mobb.png" />
         <img 
-          src="/assets/background.svg" 
+          src="/assets/background.png" 
           className={styles.backgroundImage}
           alt="Background"
         />
