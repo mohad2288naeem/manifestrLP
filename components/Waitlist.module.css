@@ -17,7 +17,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8vw;
-  align-items: flex-end;
+  align-items: center;
   height: auto;
   width: 100%;
   max-width: 1400px;
@@ -67,7 +67,7 @@
   font-family: "IvyPresto Headline";
   font-size: 60px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 85.131px;
   letter-spacing: -1.2px;
 }
@@ -79,7 +79,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 1.4;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   max-width: 480px;
 }
 
@@ -103,7 +103,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 16px;
   color: #1D1D1D;
   line-height: 1.2;
   font-family: Inter, sans-serif;
@@ -360,7 +360,7 @@
     font-size: clamp(30px, 4.5vw, 32px);
     line-height: 1.1;
     text-align: left;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
   }
 
   .italic {
@@ -371,7 +371,7 @@
   .description {
     /* font-size: clamp(12px, 2.5vw, 15px); */
     line-height: 1.4;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
